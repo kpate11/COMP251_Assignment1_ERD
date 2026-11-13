@@ -65,3 +65,16 @@ Once you have completed both of the items above, you will need to submit the lin
 - [Make a ReadMe file Web-based Editor](https://www.makeareadme.com/)
 - [Draw.io Web-based diagramming tool](https://app.diagrams.net/)
 - [Creating Entity Relationship Diagrams using Draw.io](https://www.youtube.com/watch?v=lAtCySGDD48)
+
+# Assumptions
+1. Can an amenity exist on its own without being attached to any property or renter?  
+   1. Yes.
+   2. Reason: We may want to have amenities in place before they are actually tied to any specific property or renter - for future buildings or ideas.
+ 
+2. Can a classification exist in the system even if no property or renter is current assigned to it? 
+   1. Yes.
+   2. Reason: This allows us to pre-define various levels of categories before a property or renter matches those specific criteria.
+  
+3. Can a property have unique, custom amenities that are not part of the standard preset list? 
+   1. No.
+   2. Reason: Any unique or one-off amenity not found in preset list will be placed in the long_description field as mentioned in the business rules. 
