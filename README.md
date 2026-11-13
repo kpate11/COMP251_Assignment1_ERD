@@ -66,6 +66,20 @@ Once you have completed both of the items above, you will need to submit the lin
 - [Draw.io Web-based diagramming tool](https://app.diagrams.net/)
 - [Creating Entity Relationship Diagrams using Draw.io](https://www.youtube.com/watch?v=lAtCySGDD48)
 
+
+# Entities Included 
+1. **Property**: Represents apartments that are available for rent. Data collected will include owner first and last name, email, phone, address, short description, long description, geographic coordinates, and the rent range. 
+2. **PROPERTY_AMENITY**: A junction table that resolves the many to many relationship between **PROPERTY** and **AMENITY**. 
+3. **AMENITY**: Represents the master list of features (ex: pool or balcony) available. Data collected will be the amenity name and description. 
+4. **PROSPECTIVE_RENTER**: Represents a renter's profile on the website. Data collected will be contact information, decision date, desired number of bedrooms and bathrooms, and their min. and max. rent budget. 
+5. **RENTER_AMENITY**: A junction table that resolves the many to many relationship between **PROSPECTIVE_RENTER** and **AMENITY**.  
+6. **RENTER_PROPERTY**: A junction table that resolves the many to many relationship between **PROSPECTIVE_RENTER** and **PROPERTY** listings. 
+7. **PROPERTY_AGENT**: A junction table that resolves the many to many relationship between **PROPERTY** and **AGENT**. 
+8. **CLASSIFICATION**: Represents the category of luxury (ex: A, B, C levels of luxury) used to categorize properties and renter profiles. Data collected will be a classification level, title, and description.
+9. **PACKAGE**: Represents the monthly or yearly payment package subscription options available to agents. Data collected will be package name, description, and payment option selection.
+10. **AGENT**: Represents a property agent who manages listings and makes offers. Tracks whether they are active or inactive based on their payment status. 
+11. **OFFER**: Represents a proposal made by an agent to a prospective renter. Data collected will be description of the offer, the offer expiration date, and the property name for which the offer is being made.
+
 # Assumptions
 1. Can an amenity exist on its own without being attached to any property or renter?  
    1. Yes.
@@ -94,7 +108,7 @@ Once you have completed both of the items above, you will need to submit the lin
 10. One **CLASSIFICATION** can be <ins>assigned</ins> to zero to many **RENTER** records, and each **RENTER** <ins>has</ins> one and only one **CLASSIFICATION** record.
 11. One **PACKAGE** can be <ins>assigned</ins> to one to many **AGENT** records, and each **AGENT** <ins>has</ins> one and only one **PACKAGE**.
 12. One **AGENT** can <ins>make</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **AGENT.**
-13. One **RENTER** can <ins>receive</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **RENTER.**
+13. One **PROSPECTIVE_RENTER** can <ins>receive</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **PROSPECTIVE_RENTER.**
 
 
  
