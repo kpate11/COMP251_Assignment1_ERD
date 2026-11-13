@@ -77,4 +77,24 @@ Once you have completed both of the items above, you will need to submit the lin
   
 3. Can a property have unique, custom amenities that are not part of the standard preset list? 
    1. No.
-   2. Reason: Any unique or one-off amenity not found in preset list will be placed in the long_description field as mentioned in the business rules. 
+   2. Reason: Any unique or one-off amenity not found in preset list will be placed in the long_description field as mentioned in the business rules.
+
+
+ 
+# RELATIONSHIPS
+1. One **PROPERTY** can be <ins>associated</ins> with zero to many **PROPERTY_AMENITY** records, and each **PROPERTY_AMENITY** <ins>belongs</ins> to one and only one **PROPERTY** record.
+2. One **AMENITY** can be <ins>associated</ins> with zero to many **PROPERTY_AMENITY** records, and each **PROPERTY_AMENITY** <ins>belongs</ins> to one and only one **AMENITY** record.
+3. One **PROSPECTIVE_RENTER** can <ins>have</ins> zero to many **RENTER_AMENITY** records, and each **RENTER_AMENITY** <ins>belongs</ins> to one and only one **PROSPECTIVE_RENTER** record.
+4. One **AMENITY** can be <ins>associated</ins> with zero to many **RENTER_AMENITY** records, and each **RENTER_AMENITY** <ins>belongs</ins> to one and only one **AMENITY** record. 
+5. One **PROSPECTIVE_RENTER** can <ins>save</ins> zero to many **RENTER_PROPERTY** records, and each **RENTER_PROPERTY** <ins>belongs</ins> to one and only one **PROSPECTIVE_RENTER** record.
+6. One **PROPERTY** can be <ins>saved</ins> by zero to many **RENTER_PROPERTY** records, and each **RENTER_PROPERTY** belongs to one and only one **PROPERTY** record.
+7. One **PROPERTY** can be <ins>associated</ins> with zero to many **PROPERTY_AGENT** records, and each **PROPERTY_AGENT** <ins>belongs</ins> to one and only one **PROPERTY** record.
+8. One **AGENT** can be <ins>associated</ins> with zero to many **PROPERTY_AGENT** records, and each **PROPERTY_AGENT** <ins>belongs</ins> to one and only one **AGENT** record. 
+9. One **CLASSIFICATION** can be <ins>assigned</ins> to zero to many **PROPERTY** records, and each **PROPERTY** <ins>has</ins> one and only one **CLASSIFICATION** record.
+10. One **CLASSIFICATION** can be <ins>assigned</ins> to zero to many **RENTER** records, and each **RENTER** <ins>has</ins> one and only one **CLASSIFICATION** record.
+11. One **PACKAGE** can be <ins>assigned</ins> to one to many **AGENT** records, and each **AGENT** <ins>has</ins> one and only one **PACKAGE**.
+12. One **AGENT** can <ins>make</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **AGENT.**
+13. One **RENTER** can <ins>receive</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **RENTER.**
+
+
+ 
