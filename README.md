@@ -68,7 +68,7 @@ Once you have completed both of the items above, you will need to submit the lin
 
 
 # Entities Included 
-1. **Property**: Represents apartments that are available for rent. Data collected will include owner first and last name, email, phone, address, short description, long description, geographic coordinates, and the rent range. 
+1. **PROPERTY**: Represents apartments that are available for rent. Data collected will include owner first and last name, email, phone, address, short description, long description, geographic coordinates, and the rent range. 
 2. **PROPERTY_AMENITY**: A junction table that resolves the many to many relationship between **PROPERTY** and **AMENITY**. 
 3. **AMENITY**: Represents the master list of features (ex: pool or balcony) available. Data collected will be the amenity name and description. 
 4. **PROSPECTIVE_RENTER**: Represents a renter's profile on the website. Data collected will be contact information, decision date, desired number of bedrooms and bathrooms, and their min. and max. rent budget. 
@@ -105,7 +105,7 @@ Once you have completed both of the items above, you will need to submit the lin
 7. One **PROPERTY** can be <ins>associated</ins> with zero to many **PROPERTY_AGENT** records, and each **PROPERTY_AGENT** <ins>belongs</ins> to one and only one **PROPERTY** record.
 8. One **AGENT** can be <ins>associated</ins> with zero to many **PROPERTY_AGENT** records, and each **PROPERTY_AGENT** <ins>belongs</ins> to one and only one **AGENT** record. 
 9. One **CLASSIFICATION** can be <ins>assigned</ins> to zero to many **PROPERTY** records, and each **PROPERTY** <ins>has</ins> one and only one **CLASSIFICATION** record.
-10. One **CLASSIFICATION** can be <ins>assigned</ins> to zero to many **RENTER** records, and each **RENTER** <ins>has</ins> one and only one **CLASSIFICATION** record.
+10. One **CLASSIFICATION** can be <ins>assigned</ins> to zero to many **PROSPECTIVE_RENTER** records, and each **PROSPECTIVE_RENTER** <ins>has</ins> one and only one **CLASSIFICATION** record.
 11. One **PACKAGE** can be <ins>assigned</ins> to one to many **AGENT** records, and each **AGENT** <ins>has</ins> one and only one **PACKAGE**.
 12. One **AGENT** can <ins>make</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **AGENT.**
 13. One **PROSPECTIVE_RENTER** can <ins>receive</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **PROSPECTIVE_RENTER.**
