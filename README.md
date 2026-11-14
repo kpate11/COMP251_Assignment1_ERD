@@ -111,4 +111,11 @@ Once you have completed both of the items above, you will need to submit the lin
 13. One **PROSPECTIVE_RENTER** can <ins>receive</ins> zero to many **OFFER** records, and each **OFFER** belongs to one and only one **PROSPECTIVE_RENTER.**
 
 
+# ER Diagram
+![draw.io ER Diagram]([https://github.com/kpate11/COMP251_Assignment1_ERD/blob/main/koonal_patel_lab2_diagram.png])
+
+
+
+
+
  
