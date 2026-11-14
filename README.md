@@ -68,17 +68,17 @@ Once you have completed both of the items above, you will need to submit the lin
 
 
 # Entities Included 
-1. **PROPERTY**: Represents apartments that are available for rent. Data collected will include owner first and last name, email, phone, address, short description, long description, geographic coordinates, and the rent range. 
+1. **PROPERTY**: Represents apartments that are available for rent. Data collected will include owner first and last name, email, phone, address, short description, long description, geographic coordinates, rent range (min and max values), number of bedrooms, and number of bathrooms in the unit. 
 2. **PROPERTY_AMENITY**: A junction table that resolves the many to many relationship between **PROPERTY** and **AMENITY**. 
 3. **AMENITY**: Represents the master list of features (ex: pool or balcony) available. Data collected will be the amenity name and description. 
-4. **PROSPECTIVE_RENTER**: Represents a renter's profile on the website. Data collected will be contact information, decision date, desired number of bedrooms and bathrooms, and their min. and max. rent budget. 
+4. **PROSPECTIVE_RENTER**: Represents a renter's profile on the website. Data collected will include the renter's first and last name, email, phone, address, short description, long description, geographic coordinates, rent range (min and max values), number of bedrooms required, and number of bathrooms required for them. 
 5. **RENTER_AMENITY**: A junction table that resolves the many to many relationship between **PROSPECTIVE_RENTER** and **AMENITY**.  
 6. **RENTER_PROPERTY**: A junction table that resolves the many to many relationship between **PROSPECTIVE_RENTER** and **PROPERTY** listings. 
 7. **PROPERTY_AGENT**: A junction table that resolves the many to many relationship between **PROPERTY** and **AGENT**. 
 8. **CLASSIFICATION**: Represents the category of luxury (ex: A, B, C levels of luxury) used to categorize properties and renter profiles. Data collected will be a classification level, title, and description.
 9. **PACKAGE**: Represents the monthly or yearly payment package subscription options available to agents. Data collected will be package name, description, and payment option selection.
-10. **AGENT**: Represents a property agent who manages listings and makes offers. Tracks whether they are active or inactive based on their payment status. 
-11. **OFFER**: Represents a proposal made by an agent to a prospective renter. Data collected will be description of the offer, the offer expiration date, and the property name for which the offer is being made.
+10. **AGENT**: Represents a property agent who manages listings and makes offers. Data collected will be first name of agent, last name of agent, email, phone, and whether they are active or inactive based on their payment status. 
+11. **OFFER**: Represents a proposal made by an agent to a prospective renter. Data collected will be description of the offer, the offer expiration date, the status of the offer, and the property id for which the offer is being made.
 
 # Assumptions
 1. Can an amenity exist on its own without being attached to any property or renter?  
