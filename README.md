@@ -112,7 +112,7 @@ Once you have completed both of the items above, you will need to submit the lin
 
 
 # ER Diagram
-![draw.io ER Diagram](https://github.com/kpate11/COMP251_Assignment1_ERD/blob/main/koonal_patel_lab2_diagram.png)
+![draw.io ER Diagram](https://github.com/kpate11/COMP251_Assignment1_ERD/blob/main/koonal_patel_assignment1_diagram.png)
 
 
 
